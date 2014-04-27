@@ -1,0 +1,15 @@
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\Kursach2.exe
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\Kursach2.pdb
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\Kursach.Form1.resources
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\Kursach.Properties.Resources.resources
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\Kursach2.exe
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\obj\x86\Release\Kursach2.pdb
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\HtmlAgilityPack.dll
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\HtmlAgilityPack.xml
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\Newtonsoft.Json.pdb
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\Newtonsoft.Json.xml
+C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Release\ExcelGenerator.dll
