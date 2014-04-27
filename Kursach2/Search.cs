@@ -13,8 +13,12 @@ namespace Kursach
         public List<DateTime> datesList = new List<DateTime>();
         public DateTime oldestDate = new DateTime();
         public bool Enabled = false;
+        public int mark_id;
+        public int year1;
+        public int year2;
+        public int region;
 
-        public Search(int mark_id, int year1, int year2, int region)
+        public void query()
         {
             /*liksList.Add(new string[] { "man", "damn" });
             string l = liksList[0][1];*/

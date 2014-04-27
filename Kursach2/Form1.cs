@@ -39,7 +39,7 @@ namespace Kursach
             comboBoxRegion.DisplayMember = "Key";
             comboBoxRegion.ValueMember = "Value";
             comboBoxRegion.DataSource = new BindingSource(regionList, null);
-            comboBoxRegion.SelectedIndex = 73;
+            comboBoxRegion.SelectedIndex = 75;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -49,74 +49,32 @@ namespace Kursach
 
         private void buttonSearch_Click(object sender, EventArgs e)//-----Search
         {
-            int mark_id = 0;
+            Search cars = new Search();
+            cars.mark_id = 0;
             try
             {
-                mark_id = Convert.ToInt32(comboBoxBrand.SelectedValue.ToString());
+                cars.mark_id = Convert.ToInt32(comboBoxBrand.SelectedValue.ToString());
             }
             catch{}
-            int year1 = Convert.ToInt32(comboBoxYear1.SelectedValue.ToString());
-            int year2 = Convert.ToInt32(comboBoxYear2.SelectedValue.ToString());
-            int region = 0;
+            cars.year1 = Convert.ToInt32(comboBoxYear1.SelectedValue.ToString());
+            cars.year2 = Convert.ToInt32(comboBoxYear2.SelectedValue.ToString());
+            cars.region = 0;
             try
             {
-                region = Convert.ToInt32(comboBoxRegion.SelectedValue.ToString());
+                cars.region = Convert.ToInt32(comboBoxRegion.SelectedValue.ToString());
             }
             catch{}
 
             //string url = "http://cars.auto.ru/list/?mark_id=" + mark_id + "&year%5B1%5D=" + year1 + "&year%5B2%5D=" + year2 + "&region_id=" + region;
             //richTextBox1.Text = url;
 
-           Search cars = new Search(mark_id, year1, year2, region);//int mark_id, int year1, int year2, int region
-
-           if (cars.Enabled)
-           {
-               dataGridView.Visible = true;
-               dataGridView.Rows.Clear();
-               checkBoxFollow.Visible = true;
-               buttonExcel.Visible = true;
-           }
-           else
-           {
-               dataGridView.Visible = false;
-               checkBoxFollow.Visible = false;
-               buttonExcel.Visible = false;
-               MessageBox.Show("По вашему запросу ничего не найдено.\nПопробуйте изменить некоторые параметры");
-           }
+            backgroundWorkerSearch.RunWorkerAsync();//run, bg, run
 
 
-           int j = 0;
-           foreach(string[] i in cars.carsList)
-            {
-                DataGridViewRow row = (DataGridViewRow)dataGridView.Rows[0].Clone();
-                try
-                {
-                    row.Cells[0].Value = i[0];
-                    row.Cells[1].Value = i[1];
-                    row.Cells[2].Value = i[2];
-                    row.Cells[3].Value = i[3];
-                    row.Cells[4].Value = cars.datesList[j].ToString("D", CultureInfo.CreateSpecificCulture("ru-RU"));
-                    row.Cells[5].Value = cars.linksList[j];
-                }
-                catch
-                {
-                    row.Cells[0].Value = "";
-                    row.Cells[1].Value = "";
-                    row.Cells[2].Value = "";
-                    row.Cells[3].Value = "";
-                    row.Cells[4].Value = "";
-                    row.Cells[5].Value = "";
-                }
-                dataGridView.Rows.Add(row);
-                j++;
-            }
+            //code from  backgroundWorkerSearch_RunWorkerCompleted was here
 
-           foreach (DateTime date in cars.datesList)
-           {
-               if (DateTime.Compare(cars.oldestDate, date) < 0)
-                   cars.oldestDate = date;
-           }
-           localOldestDate = cars.oldestDate;
+
+          
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -186,7 +144,7 @@ namespace Kursach
                 region = Convert.ToInt32(comboBoxRegion.SelectedValue.ToString());
             }
             catch { }
-            Search cars = new Search(mark_id, year1, year2, region);
+            Search cars = new Search();//!!!!!!
 
             cars.oldestDate = localOldestDate;
             foreach (DateTime date in cars.datesList)
@@ -204,6 +162,71 @@ namespace Kursach
 
         private void buttonSearch_KeyDown(object sender, KeyEventArgs e)
         {
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Search cars = new Search();
+            cars.query();
+        }
+
+        private void backgroundWorkerSearch_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorkerSearch_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Search cars = new Search();
+
+            if (cars.Enabled)
+            {
+                dataGridView.Visible = true;
+                dataGridView.Rows.Clear();
+                checkBoxFollow.Visible = true;
+                buttonExcel.Visible = true;
+            }
+            else
+            {
+                dataGridView.Visible = false;
+                checkBoxFollow.Visible = false;
+                buttonExcel.Visible = false;
+                MessageBox.Show("По вашему запросу ничего не найдено.\nПопробуйте изменить некоторые параметры");
+            }
+
+            int j = 0;
+            foreach (string[] i in cars.carsList)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView.Rows[0].Clone();
+                try
+                {
+                    row.Cells[0].Value = i[0];
+                    row.Cells[1].Value = i[1];
+                    row.Cells[2].Value = i[2];
+                    row.Cells[3].Value = i[3];
+                    row.Cells[4].Value = cars.datesList[j].ToString("D", CultureInfo.CreateSpecificCulture("ru-RU"));
+                    row.Cells[5].Value = cars.linksList[j];
+                }
+                catch
+                {
+                    row.Cells[0].Value = "";
+                    row.Cells[1].Value = "";
+                    row.Cells[2].Value = "";
+                    row.Cells[3].Value = "";
+                    row.Cells[4].Value = "";
+                    row.Cells[5].Value = "";
+                }
+                dataGridView.Rows.Add(row);
+                j++;
+            }
+
+            foreach (DateTime date in cars.datesList)
+            {
+                if (DateTime.Compare(cars.oldestDate, date) < 0)
+                    cars.oldestDate = date;
+            }
+            localOldestDate = cars.oldestDate;
+
         }
 
         

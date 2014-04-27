@@ -135,26 +135,46 @@
   <metadata name="ColumnLink.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ColumnName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnYear.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnCity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnLink.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonExcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAALBSURBVHhe7Zq9bhNBFIV5E14AXgD6CEoooIEOJGgTKigIgi4RVIGGUFCABIK0cRkJBIKK38pU
-        ECkpQOJHUA7cxcc6rM/17mZnhOWZT/qk5N7ZHc/xeLNWdt/+xYWQsyUAVczJEoAq5mQJQBVzsgSgijlZ
-        AlDFnPwvARy6eiqcWFsK1zfvhs03T8LHzzvBUGNTmzyAI6vnwpn1y9Vinw1fha8/v1eLVajjUxs1AHtX
-        F++thNtbj6rFdkWdM7V7CuDAxWPVYpc3boYHLwbh3fZwtIR+qLlS2ykA/rymQM2Z2k4BpCbGPHaN4dfc
-        5NwFYPBrbrIEoIqeqVFzmkD1IKP6niUAVfRMjZrTBKoHGdX3LAGooude+fRlNzwfvq58v/1hVJ1EzWkC
-        1YOM6ntGC+Dk2oVwdPV8NW596/Go+pfD106Pz3Hjz3cCjzbztAHnaWO0AJbur4zH2YLB4O3Tcf3gpePh
-        268fo84kGNcXnKeN0QKwbc5jsdXP3lke1yykafDxLFA9yKi+Z9RrAO8C+7keiv0+DR7LAtWDjOp7Rg3A
-        LnIYa9u9HkgTGFsXqB5kVN8zagCGXQzVsU3vvqGOM4HqQUb1PaMHwLsAtnn3jfpxEKgeZFTfM3oAhm1/
-        Ps5CaUPXeTx47iZncgf0heduslwDVNGzCX737WYou78CfMv78OVg4uMw1/cBtmCM41teDqVpF2BcXaB6
-        kFF9z2gB8EKvbNwaVf8Nxpy2C3gcC1QPMqrvGSUA/sJj8iJtJ/CfxWm7AGP6gvO0Meo1wMO+GNn1wJzb
-        r8MxUHOaQPUgo/qeJQBV9EyNmtMEqgcZ1fcsAaiiZ2rUnCZQPciovudMBtAXfs1NlgBU0TM1MeZJ+u/x
-        7B+QgNk+ItNkNg9JdTGrx+TamtWDkrNuCUAVc7IEoIo5WQJQxZwsAahiTpYAVDEfF8JvNUOkVJEeILAA
-        AAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAsFJREFUeF7t
+        mr1uE0EUhXkTXgBeAPoISiiggQ4kaBMqKAiCLhFUgYZQUIAEgrRxGQkEgorfylQQKSlA4kdQDtzFxzqs
+        z/XuZmeE5ZlP+qTk3tkdz/F4s1Z23/7FhZCzJQBVzMkSgCrmZAlAFXOyBKCKOVkCUMWc/C8BHLp6KpxY
+        WwrXN++GzTdPwsfPO8FQY1ObPIAjq+fCmfXL1WKfDV+Frz+/V4tVqONTGzUAe1cX762E21uPqsV2RZ0z
+        tXsK4MDFY9VilzduhgcvBuHd9nC0hH6ouVLbKQD+vKZAzZnaTgGkJsY8do3h19zk3AVg8GtusgSgip6p
+        UXOaQPUgo/qeJQBV9EyNmtMEqgcZ1fcsAaii51759GU3PB++rny//WFUnUTNaQLVg4zqe0YL4OTahXB0
+        9Xw1bn3r8aj6l8PXTo/PcePPdwKPNvO0AedpY7QAlu6vjMfZgsHg7dNx/eCl4+Hbrx+jziQY1xecp43R
+        ArBtzmOx1c/eWR7XLKRp8PEsUD3IqL5n1GsA7wL7uR6K/T4NHssC1YOM6ntGDcAuchhr270eSBMYWxeo
+        HmRU3zNqAIZdDNWxTe++oY4zgepBRvU9owfAuwC2efeN+nEQqB5kVN8zegCGbX8+zkJpQ9d5PHjuJmdy
+        B/SF526yXANU0bMJfvftZii7vwJ8y/vw5WDi4zDX9wG2YIzjW14OpWkXYFxdoHqQUX3PaAHwQq9s3BpV
+        /w3GnLYLeBwLVA8yqu8ZJQD+wmPyIm0n8J/FabsAY/qC87Qx6jXAw74Y2fXAnNuvwzFQc5pA9SCj+p4l
+        AFX0TI2a0wSqBxnV9ywBqKJnatScJlA9yKi+50wG0Bd+zU2WAFTRMzUx5kn67/HsH5CA2T4i02Q2D0l1
+        MavH5Nqa1YOSs24JQBVzsgSgijlZAlDFnCwBqGJOlgBUMR8Xwm81Q6RUkR4gsAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="backgroundWorkerSearch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>97, 17</value>
   </metadata>
 </root>

@@ -25,3 +25,11 @@ C:\Users\Алексей\YandexDisk\Studying\Kursach2\Kursach2\Kursach2\obj\x86\D
 C:\Users\Алексей\YandexDisk\Studying\Kursach2\Kursach2\Kursach2\obj\x86\Debug\Kursach2.csproj.GenerateResource.Cache
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach2.exe
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach2.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\Kursach2.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\Kursach2.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach2.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach.Form1.resources
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach.Properties.Resources.resources
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach2.csproj.GenerateResource.Cache

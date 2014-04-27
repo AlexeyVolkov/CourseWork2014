@@ -50,6 +50,7 @@
             this.buttonExcel = new System.Windows.Forms.Button();
             this.checkBoxFollow = new System.Windows.Forms.CheckBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorkerSearch = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -262,6 +263,14 @@
             this.timer.Interval = 1800000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // backgroundWorkerSearch
+            // 
+            this.backgroundWorkerSearch.WorkerReportsProgress = true;
+            this.backgroundWorkerSearch.WorkerSupportsCancellation = true;
+            this.backgroundWorkerSearch.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorkerSearch.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerSearch_ProgressChanged);
+            this.backgroundWorkerSearch.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerSearch_RunWorkerCompleted);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
         private System.Windows.Forms.DataGridViewLinkColumn ColumnLink;
         private System.Windows.Forms.Timer timer;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerSearch;
     }
 }
 
