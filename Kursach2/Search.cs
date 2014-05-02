@@ -20,9 +20,6 @@ namespace Kursach
 
         public void query()
         {
-            /*liksList.Add(new string[] { "man", "damn" });
-            string l = liksList[0][1];*/
-
             string url = "http://cars.auto.ru/list/?mark_id=" + mark_id + "&year%5B1%5D=" + year1 + "&year%5B2%5D=" + year2 + "&region_id=" + region;
             
             HtmlWeb www = new HtmlWeb();
