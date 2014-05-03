@@ -17,7 +17,12 @@ namespace Kursach
         public int year1;
         public int year2;
         public int region;
-
+        /*
+         * 
+         * Если существует ссылка на след. стр, то nextPage=true и тогда в цикле whlie(nextPage) в Form1.cs исполняем cars.query(nextPageUrl)
+         * 
+         * Соответственно в query написать принимающюю по умолчанию ещё одну переменную
+         */
         public void query()
         {
             string url = "http://cars.auto.ru/list/?mark_id=" + mark_id + "&year%5B1%5D=" + year1 + "&year%5B2%5D=" + year2 + "&region_id=" + region;
@@ -27,7 +32,7 @@ namespace Kursach
 
             try
             {
-                bool first = true; //needed
+                bool first = true; //if it's the first string - miss it
                 HtmlNodeCollection node = html.DocumentNode.SelectNodes("//div[@id='cars_sale']/table");
                 HtmlNodeCollection nodes = node[0].SelectNodes("tr");
 
