@@ -32,7 +32,7 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            ParserForm form = new ParserForm();
             form.Show();
         }
     }

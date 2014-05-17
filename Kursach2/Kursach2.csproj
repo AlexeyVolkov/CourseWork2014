@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCarForm.Designer.cs">
+      <DependentUpon>AddNewCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DefaultLists.cs" />
     <Compile Include="Excel.cs" />
     <Compile Include="Form1.cs">
@@ -69,6 +75,9 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewCarForm.resx">
+      <DependentUpon>AddNewCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

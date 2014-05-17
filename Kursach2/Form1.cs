@@ -12,10 +12,10 @@ using System.Threading;
 
 namespace Kursach
 {
-    public partial class Form1 : Form
+    public partial class ParserForm : Form
     {
         DateTime localOldestDate = new DateTime();
-        public Form1()
+        public ParserForm()
         {
             InitializeComponent();
             
@@ -243,6 +243,12 @@ namespace Kursach
                     cars.oldestDate = date;
             }
             localOldestDate = cars.oldestDate;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddNewCarForm carForm = new AddNewCarForm();
+            carForm.Show();
         }    
     }
 }
