@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBLibrary">
+      <HintPath>..\Files\DBLibrary\DBLibrary\bin\Debug\DBLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelGenerator">
       <HintPath>..\..\..\..\..\Downloads\ExcelGenerator_bin_1_4\ExcelGenerator.dll</HintPath>
     </Reference>
@@ -93,7 +96,6 @@
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

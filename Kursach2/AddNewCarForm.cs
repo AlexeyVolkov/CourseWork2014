@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using DBLibrary;
+
 namespace Kursach
 {
     public partial class AddNewCarForm : Form
@@ -52,6 +54,11 @@ namespace Kursach
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)//Add
+        {
+            ManagerClass manage = ManagerClass(@"path");
         }
     }
 }
