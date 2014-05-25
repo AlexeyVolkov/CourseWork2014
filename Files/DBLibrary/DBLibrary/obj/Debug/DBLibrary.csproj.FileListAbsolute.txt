@@ -8,3 +8,8 @@ C:\Users\Алексей\YandexDisk\Studying\CourseWork2014\DBLibrary\DBLibrary\b
 C:\Users\Алексей\YandexDisk\Studying\CourseWork2014\DBLibrary\DBLibrary\obj\Debug\DBLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Алексей\YandexDisk\Studying\CourseWork2014\DBLibrary\DBLibrary\obj\Debug\DBLibrary.dll
 C:\Users\Алексей\YandexDisk\Studying\CourseWork2014\DBLibrary\DBLibrary\obj\Debug\DBLibrary.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\DBLibrary\DBLibrary\bin\Debug\DBLibrary.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\DBLibrary\DBLibrary\bin\Debug\DBLibrary.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\DBLibrary\DBLibrary\obj\Debug\DBLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\DBLibrary\DBLibrary\obj\Debug\DBLibrary.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\DBLibrary\DBLibrary\obj\Debug\DBLibrary.pdb

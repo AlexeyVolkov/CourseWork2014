@@ -58,7 +58,10 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)//Add
         {
-            ManagerClass manage = ManagerClass(@"path");
+            ManagerClass manage = new ManagerClass(@"../../../Files/Database/cars.mdf");
+            string query = "INSERT INTO Cars (name) VALUES ('man');";
+            var s = manage.ExecSQL(query);
+            MessageBox.Show(s);
         }
     }
 }
