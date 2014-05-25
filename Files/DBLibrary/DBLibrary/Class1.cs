@@ -22,7 +22,7 @@ namespace DBLibrary
             }
             set
             {
-                connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + value + ";Integrated Security=True;Connect Timeout=30;User Instance=True";
+                connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + value + ";Integrated Security=True;Connect Timeout=30";
             }
         }
         public ManagerClass(string dbpath)
