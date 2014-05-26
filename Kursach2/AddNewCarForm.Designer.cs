@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewCarForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,13 +39,18 @@
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxUrlPhoto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.carsDataSet = new Kursach.carsDataSet();
+            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carsTableAdapter = new Kursach.carsDataSetTableAdapters.CarsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,13 +144,13 @@
             this.textBoxName.TabIndex = 21;
             this.textBoxName.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
-            // textBox2
+            // textBoxPrice
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(219, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 33);
-            this.textBox2.TabIndex = 23;
+            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice.Location = new System.Drawing.Point(219, 223);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(213, 33);
+            this.textBoxPrice.TabIndex = 23;
             // 
             // label6
             // 
@@ -156,14 +162,14 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Цена:";
             // 
-            // textBox3
+            // textBoxUrlPhoto
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(219, 267);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 33);
-            this.textBox3.TabIndex = 25;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBoxUrlPhoto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUrlPhoto.Location = new System.Drawing.Point(219, 267);
+            this.textBoxUrlPhoto.Name = "textBoxUrlPhoto";
+            this.textBoxUrlPhoto.Size = new System.Drawing.Size(213, 33);
+            this.textBoxUrlPhoto.TabIndex = 25;
+            this.textBoxUrlPhoto.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label7
             // 
@@ -186,13 +192,13 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "Дополнительная информация:";
             // 
-            // richTextBox1
+            // richTextBoxInfo
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(25, 367);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(407, 156);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "";
+            this.richTextBoxInfo.Location = new System.Drawing.Point(25, 367);
+            this.richTextBoxInfo.Name = "richTextBoxInfo";
+            this.richTextBoxInfo.Size = new System.Drawing.Size(407, 156);
+            this.richTextBoxInfo.TabIndex = 27;
+            this.richTextBoxInfo.Text = "";
             // 
             // buttonAdd
             // 
@@ -205,17 +211,31 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
             // 
+            // carsDataSet
+            // 
+            this.carsDataSet.DataSetName = "carsDataSet";
+            this.carsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carsBindingSource
+            // 
+            this.carsBindingSource.DataMember = "Cars";
+            this.carsBindingSource.DataSource = this.carsDataSet;
+            // 
+            // carsTableAdapter
+            // 
+            this.carsTableAdapter.ClearBeforeFill = true;
+            // 
             // AddNewCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 612);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxUrlPhoto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label3);
@@ -234,6 +254,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавление нового авто";
             this.Load += new System.EventHandler(this.AddNewCarForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,12 +272,15 @@
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxUrlPhoto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxInfo;
         private System.Windows.Forms.Button buttonAdd;
+        private carsDataSet carsDataSet;
+        private System.Windows.Forms.BindingSource carsBindingSource;
+        private carsDataSetTableAdapters.CarsTableAdapter carsTableAdapter;
     }
 }

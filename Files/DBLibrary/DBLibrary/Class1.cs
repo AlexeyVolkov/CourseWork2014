@@ -14,21 +14,8 @@ namespace DBLibrary
     public class ManagerClass
     {
         string connectionString = "";
-        public string ConsStr
-        {
-            get
-            {
-                return connectionString;
-            }
-            set
-            {
-                connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + value + ";Integrated Security=True;Connect Timeout=30";
-            }
-        }
-        public ManagerClass(string dbpath)
-        {
-            ConsStr = dbpath;
-        }
+        private string ConsStr = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\cars.mdf;Integrated Security=True;Connect Timeout=30";
+
         public string ExecSQL(string query)
         {
             try

@@ -40,6 +40,8 @@ namespace Kursach
 
         private void AddNewCarForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'carsDataSet.Cars' table. You can move, or remove it, as needed.
+            this.carsTableAdapter.Fill(this.carsDataSet.Cars);
 
         }
 
@@ -59,9 +61,11 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)//Add
         {
-            ManagerClass manage = new ManagerClass(@"../../../Files/Database/cars.mdf");
-            string query = "INSERT INTO Cars (name) VALUES ('man');";
+            
+            ManagerClass manage = new ManagerClass();
+            string query = @"INSERT INTO Cars (name, mark, info, region, url_photo) VALUES ('" + textBoxName.Text + "', '" + comboBoxBrand.Text + "', '" + richTextBoxInfo.Text + "', '" + comboBoxRegion.Text + "', '" + textBoxUrlPhoto.Text + "');";
             var s = manage.ExecSQL(query);
+            
             MessageBox.Show(s);
         }
     }
