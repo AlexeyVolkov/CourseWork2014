@@ -249,6 +249,13 @@ namespace Kursach
         {
             AddNewCarForm carForm = new AddNewCarForm();
             carForm.Show();
+        }
+
+        private void ParserForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'carsDataSet.Cars' table. You can move, or remove it, as needed.
+            this.carsTableAdapter.Fill(this.carsDataSet.Cars);
+
         }    
     }
 }
