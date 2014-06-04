@@ -63,8 +63,7 @@ namespace Kursach
         {
             
             ManagerClass manage = new ManagerClass();
-            DateTime date = new DateTime();
-            string query = @"INSERT INTO Cars (name, mark, year, price, info, date, region, url_photo) VALUES ('" + textBoxName.ToString() + "', '" + comboBoxBrand.SelectedValue.ToString() + "', " + Convert.ToInt32(comboBoxYear.SelectedValue.ToString()) + ", " + Convert.ToInt32(textBoxPrice.ToString()) + ", '" + richTextBoxInfo.ToString() + "', '" + date.ToString() + "', '" + comboBoxRegion.SelectedValue.ToString() + "', '" + textBoxUrlPhoto.ToString() + "');";
+            string query = @"INSERT INTO Cars (name, mark, year, price, info, region, url_photo) VALUES ('" + textBoxName.ToString() + "', '" + comboBoxBrand.SelectedValue.ToString() + "', " + Convert.ToInt32(comboBoxYear.SelectedValue.ToString()) + ", " + Convert.ToInt32(textBoxPrice.ToString()) + ", '" + richTextBoxInfo.ToString() + "', '" + comboBoxRegion.SelectedValue.ToString() + "', '" + textBoxUrlPhoto.ToString() + "');";
             var s = manage.ExecSQL(query);
             
             MessageBox.Show(s);

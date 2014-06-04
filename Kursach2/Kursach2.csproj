@@ -76,10 +76,19 @@
     <Compile Include="AddNewCarForm.Designer.cs">
       <DependentUpon>AddNewCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="carsDataSet.cs">
+      <DependentUpon>carsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="carsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>carsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="carsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carsDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DefaultLists.cs" />
     <Compile Include="Excel.cs" />
@@ -127,6 +136,17 @@
     </None>
     <None Include="carsDataSet.xss">
       <DependentUpon>carsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="carsDataSet1.xsc">
+      <DependentUpon>carsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="carsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="carsDataSet1.xss">
+      <DependentUpon>carsDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

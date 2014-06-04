@@ -1,0 +1,8 @@
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\bin\Debug\ConsoleHost.exe.config
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\bin\Debug\ConsoleHost.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\bin\Debug\ConsoleHost.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\bin\Debug\ParsingService.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\bin\Debug\ParsingService.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\obj\Debug\ConsoleHost.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\obj\Debug\ConsoleHost.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ParsingService\ConsoleHost\obj\Debug\ConsoleHost.pdb

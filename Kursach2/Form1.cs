@@ -253,6 +253,8 @@ namespace Kursach
 
         private void ParserForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'carsDataSet1.Cars' table. You can move, or remove it, as needed.
+            this.carsTableAdapter1.Fill(this.carsDataSet1.Cars);
             // TODO: This line of code loads data into the 'carsDataSet.Cars' table. You can move, or remove it, as needed.
             this.carsTableAdapter.Fill(this.carsDataSet.Cars);
 
