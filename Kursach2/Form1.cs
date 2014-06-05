@@ -10,6 +10,11 @@ using System.Globalization;
 using System.Media;
 using System.Threading;
 
+using System.Data.SqlClient;
+using System.Data.Linq;
+
+using MappingDLL;
+
 namespace Kursach
 {
     public partial class ParserForm : Form
@@ -200,8 +205,9 @@ namespace Kursach
             {
                 dataGridView.Visible = true;
                 dataGridView.Rows.Clear();
-                checkBoxFollow.Visible = true;
-                buttonExcel.Visible = true;
+                //checkBoxFollow.Visible = true;                 -Тут изменить, если чё
+                //buttonExcel.Visible = true;                               -Тут изменить, если чё
+                AddToBDbutton.Visible = true;
             }
             else
             {
@@ -258,6 +264,30 @@ namespace Kursach
             // TODO: This line of code loads data into the 'carsDataSet.Cars' table. You can move, or remove it, as needed.
             this.carsTableAdapter.Fill(this.carsDataSet.Cars);
 
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AddToBDbutton_Click(object sender, EventArgs e)
+        {
+            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\cars.mdf;Integrated Security=True;Connect Timeout=30");
+
+            Car newCar = new Car();
+
+            newCar.name = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            newCar.mark = comboBoxBrand.SelectedValue.ToString();
+            newCar.year = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value.ToString());
+            newCar.price = Convert.ToInt32(dataGridView.CurrentRow.Cells[1].Value.ToString().Replace(" ", string.Empty));
+            newCar.url = dataGridView.CurrentRow.Cells[5].Value.ToString();
+            newCar.region = comboBoxRegion.SelectedValue.ToString();
+
+            db.Cars.InsertOnSubmit(newCar);
+            db.SubmitChanges();
+
+            MessageBox.Show("Успешно добавлено!");
         }    
     }
 }

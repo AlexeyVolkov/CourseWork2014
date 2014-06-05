@@ -60,6 +60,7 @@
             this.carsDataSet = new Kursach.carsDataSet();
             this.carsTableAdapter = new Kursach.carsDataSetTableAdapters.CarsTableAdapter();
             this.carsTableAdapter1 = new Kursach.carsDataSet1TableAdapters.CarsTableAdapter();
+            this.AddToBDbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -203,6 +204,7 @@
             this.dataGridView.Size = new System.Drawing.Size(660, 402);
             this.dataGridView.TabIndex = 1;
             this.dataGridView.Visible = false;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // ColumnName
             // 
@@ -345,11 +347,23 @@
             // 
             this.carsTableAdapter1.ClearBeforeFill = true;
             // 
+            // AddToBDbutton
+            // 
+            this.AddToBDbutton.Location = new System.Drawing.Point(820, 373);
+            this.AddToBDbutton.Name = "AddToBDbutton";
+            this.AddToBDbutton.Size = new System.Drawing.Size(113, 23);
+            this.AddToBDbutton.TabIndex = 15;
+            this.AddToBDbutton.Text = "Добавить в базу";
+            this.AddToBDbutton.UseVisualStyleBackColor = true;
+            this.AddToBDbutton.Visible = false;
+            this.AddToBDbutton.Click += new System.EventHandler(this.AddToBDbutton_Click);
+            // 
             // ParserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 633);
+            this.Controls.Add(this.AddToBDbutton);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -410,6 +424,7 @@
         private carsDataSet1 carsDataSet1;
         private System.Windows.Forms.BindingSource carsBindingSource1;
         private carsDataSet1TableAdapters.CarsTableAdapter carsTableAdapter1;
+        private System.Windows.Forms.Button AddToBDbutton;
     }
 }
 

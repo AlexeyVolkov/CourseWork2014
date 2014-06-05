@@ -65,7 +65,6 @@ namespace Kursach
         private void button1_Click(object sender, EventArgs e)//Add
         {
             Car newCar = new Car();
-            newCar.name = "Combain";
 
             newCar.name = textBoxName.Text.ToString();
             newCar.mark = comboBoxBrand.SelectedValue.ToString();
@@ -75,9 +74,9 @@ namespace Kursach
             newCar.region = comboBoxRegion.SelectedValue.ToString();
             newCar.url_photo = textBoxUrlPhoto.Text.ToString();
 
-
             db.Cars.InsertOnSubmit(newCar);
             db.SubmitChanges();
+
             MessageBox.Show("Успешно добавлено!");
         }
     }
