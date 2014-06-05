@@ -66,14 +66,19 @@ namespace Kursach
         {
             Car newCar = new Car();
             newCar.name = "Combain";
+
+            newCar.name = textBoxName.Text.ToString();
+            newCar.mark = comboBoxBrand.SelectedValue.ToString();
+            newCar.year = Convert.ToInt32(comboBoxYear.SelectedValue.ToString());
+            newCar.price = Convert.ToInt32(textBoxPrice.Text);
+            newCar.info = richTextBoxInfo.Text.ToString();
+            newCar.region = comboBoxRegion.SelectedValue.ToString();
+            newCar.url_photo = textBoxUrlPhoto.Text.ToString();
+
+
             db.Cars.InsertOnSubmit(newCar);
             db.SubmitChanges();
-
-            /*ManagerClass manage = new ManagerClass();
-            string query = @"INSERT INTO Cars (name, mark, year, price, info, region, url_photo) VALUES ('" + textBoxName.ToString() + "', '" + comboBoxBrand.SelectedValue.ToString() + "', " + Convert.ToInt32(comboBoxYear.SelectedValue.ToString()) + ", " + Convert.ToInt32(textBoxPrice.ToString()) + ", '" + richTextBoxInfo.ToString() + "', '" + comboBoxRegion.SelectedValue.ToString() + "', '" + textBoxUrlPhoto.ToString() + "');";
-            var s = manage.ExecSQL(query);*/
-
-            MessageBox.Show("Доне");
+            MessageBox.Show("Успешно добавлено!");
         }
     }
     public class DB : DataContext
