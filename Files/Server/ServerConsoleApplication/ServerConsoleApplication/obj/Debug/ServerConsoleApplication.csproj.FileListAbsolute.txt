@@ -6,3 +6,10 @@ c:\users\алексей\documents\visual studio 2013\Projects\ServerConsoleAppli
 c:\users\алексей\documents\visual studio 2013\Projects\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.csprojResolveAssemblyReference.cache
 c:\users\алексей\documents\visual studio 2013\Projects\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.exe
 c:\users\алексей\documents\visual studio 2013\Projects\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.exe.config
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\DLLforServer.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.pdb

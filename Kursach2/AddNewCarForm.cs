@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using DBLibrary;
+using System.Data.SqlClient;
+using System.Data.Linq;
+
+using MappingDLL;
 
 namespace Kursach
 {
     public partial class AddNewCarForm : Form
     {
+        DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\cars.mdf;Integrated Security=True;Connect Timeout=30");
         public AddNewCarForm()
         {
             InitializeComponent();
@@ -61,12 +64,29 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)//Add
         {
-            
-            ManagerClass manage = new ManagerClass();
+            Car newCar = new Car();
+            newCar.name = "Combain";
+            db.Cars.InsertOnSubmit(newCar);
+            db.SubmitChanges();
+
+            /*ManagerClass manage = new ManagerClass();
             string query = @"INSERT INTO Cars (name, mark, year, price, info, region, url_photo) VALUES ('" + textBoxName.ToString() + "', '" + comboBoxBrand.SelectedValue.ToString() + "', " + Convert.ToInt32(comboBoxYear.SelectedValue.ToString()) + ", " + Convert.ToInt32(textBoxPrice.ToString()) + ", '" + richTextBoxInfo.ToString() + "', '" + comboBoxRegion.SelectedValue.ToString() + "', '" + textBoxUrlPhoto.ToString() + "');";
-            var s = manage.ExecSQL(query);
-            
-            MessageBox.Show(s);
+            var s = manage.ExecSQL(query);*/
+
+            MessageBox.Show("Доне");
+        }
+    }
+    public class DB : DataContext
+    {
+        public DB(string cs)
+            : base(cs)
+        {
+        }
+
+        public System.Data.Linq.Table<Car> Cars
+        {
+            get { return this.GetTable<Car>(); }
+
         }
     }
 }

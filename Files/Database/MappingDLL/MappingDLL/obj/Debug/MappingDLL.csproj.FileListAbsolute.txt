@@ -1,0 +1,12 @@
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\bin\Debug\MappingDLL.dll.config
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\bin\Debug\MappingDLL.dll
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\bin\Debug\MappingDLL.pdb
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\obj\Debug\MappingDLL.csprojResolveAssemblyReference.cache
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\obj\Debug\MappingDLL.dll
+c:\users\алексей\documents\visual studio 2013\Projects\MappingDLL\MappingDLL\obj\Debug\MappingDLL.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\bin\Debug\MappingDLL.dll.config
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\bin\Debug\MappingDLL.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\bin\Debug\MappingDLL.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\obj\Debug\MappingDLL.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\obj\Debug\MappingDLL.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\MappingDLL\MappingDLL\obj\Debug\MappingDLL.pdb

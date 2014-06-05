@@ -4,3 +4,9 @@ c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleAppli
 c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.csprojResolveAssemblyReference.cache
 c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.exe
 c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe.config
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.csprojResolveAssemblyReference.cache

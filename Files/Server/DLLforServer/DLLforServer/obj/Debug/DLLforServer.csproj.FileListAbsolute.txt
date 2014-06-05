@@ -3,3 +3,8 @@ c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLfo
 c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.csprojResolveAssemblyReference.cache
 c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.dll
 c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\bin\Debug\DLLforServer.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\bin\Debug\DLLforServer.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\obj\Debug\DLLforServer.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\obj\Debug\DLLforServer.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\obj\Debug\DLLforServer.pdb
