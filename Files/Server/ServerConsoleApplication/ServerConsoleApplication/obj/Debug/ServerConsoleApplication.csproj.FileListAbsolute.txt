@@ -13,3 +13,8 @@ C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerC
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.exe
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\DLLforServer.pdb
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\DBLibrary.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\DLLforServer.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\MappingDLL.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\DBLibrary.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\MappingDLL.pdb

@@ -12,11 +12,21 @@ using System.Threading;
 
 using System.Data.SqlClient;
 using System.Data.Linq;
-
+using System.ServiceModel;
+using CommunicationInterface;
 using MappingDLL;
 
 namespace Kursach
 {
+    [ServiceContract]
+    public interface IMyObject
+    {
+        [OperationContract]
+        bool newCarFromGrid(string name, string mark, int year, int price, string url, string region);
+        [OperationContract]
+        bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
+
+    }
     public partial class ParserForm : Form
     {
         DateTime localOldestDate = new DateTime();
@@ -273,21 +283,29 @@ namespace Kursach
 
         private void AddToBDbutton_Click(object sender, EventArgs e)
         {
-            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\cars.mdf;Integrated Security=True;Connect Timeout=30");
+            string name = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            string mark = comboBoxBrand.SelectedValue.ToString();
+            int year = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value.ToString());
+            int price = Convert.ToInt32(dataGridView.CurrentRow.Cells[1].Value.ToString().Replace(" ", string.Empty));
+            string url = dataGridView.CurrentRow.Cells[5].Value.ToString();
+            string region = comboBoxRegion.SelectedValue.ToString();
 
-            Car newCar = new Car();
+            Uri tcpUri = new Uri("http://localhost:8080/");
+            EndpointAddress address = new EndpointAddress(tcpUri);
+            BasicHttpBinding binding = new BasicHttpBinding();
+            ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
+            IMyObject service = factory.CreateChannel();
 
-            newCar.name = dataGridView.CurrentRow.Cells[0].Value.ToString();
-            newCar.mark = comboBoxBrand.SelectedValue.ToString();
-            newCar.year = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value.ToString());
-            newCar.price = Convert.ToInt32(dataGridView.CurrentRow.Cells[1].Value.ToString().Replace(" ", string.Empty));
-            newCar.url = dataGridView.CurrentRow.Cells[5].Value.ToString();
-            newCar.region = comboBoxRegion.SelectedValue.ToString();
+            bool answer = service.newCarFromGrid(name, mark, year, price, url, region);
+            if (answer)
+            {
+                MessageBox.Show("Успешно добавлено!");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка");
+            }
 
-            db.Cars.InsertOnSubmit(newCar);
-            db.SubmitChanges();
-
-            MessageBox.Show("Успешно добавлено!");
         }    
     }
 }

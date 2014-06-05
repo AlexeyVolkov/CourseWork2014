@@ -6,24 +6,61 @@ using System.Threading.Tasks;
 
 using System.ServiceModel;
 using CommunicationInterface;
+using System.Data.SqlClient;
+using System.Data.Linq;
+using MappingDLL;
 
 namespace CommunicationInterface
 {
+    public class DB : DataContext
+    {
+        public DB(string cs)
+            : base(cs)
+        {
+        }
+
+        public System.Data.Linq.Table<Car> Cars
+        {
+            get { return this.GetTable<Car>(); }
+
+        }
+    }
     public class MyObject : IMyObject
     {
-        public string GetCommandString(int i)
+        public bool newCarFromGrid(string name, string mark, int year, int price, string url, string region)
         {
-            switch (i)
-            {
-                case 1:// TODO: Реализация старта выполнения ваших команд
-                    return "Начало обработки";
+            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
+            
+            Car newCar = new Car();
 
-                case 0:// TODO: Реализация остановки выполнения ваших команд
-                    return "Конец обработки";
+            newCar.name = name;
+            newCar.mark = mark;
+            newCar.year = year;
+            newCar.price = price;
+            newCar.url = url;
+            newCar.region = region;
 
-                default:// TODO: Выполнение какой-либо вашей команды
-                    return "Получил " + i.ToString();
-            }
+            db.Cars.InsertOnSubmit(newCar);
+            db.SubmitChanges();
+            return true;
+        }
+        public bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo)
+        {
+            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
+
+            Car newCar = new Car();
+
+            newCar.name = name;
+            newCar.mark = mark;
+            newCar.year = year;
+            newCar.price = price;
+            newCar.info = info;
+            newCar.region = region;
+            newCar.url_photo = url_photo;
+
+            db.Cars.InsertOnSubmit(newCar);
+            db.SubmitChanges();
+            return true;
         }
     }
 }

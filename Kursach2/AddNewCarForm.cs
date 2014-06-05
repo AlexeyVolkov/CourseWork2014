@@ -9,8 +9,9 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using System.Data.Linq;
-
+using CommunicationInterface;
 using MappingDLL;
+using System.ServiceModel;
 
 namespace Kursach
 {
@@ -64,20 +65,29 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)//Add
         {
-            Car newCar = new Car();
+            string name = textBoxName.Text.ToString();
+            string mark = comboBoxBrand.SelectedValue.ToString();
+            int year = Convert.ToInt32(comboBoxYear.SelectedValue.ToString());
+            int price = Convert.ToInt32(textBoxPrice.Text);
+            string info = richTextBoxInfo.Text.ToString();
+            string region = comboBoxRegion.SelectedValue.ToString();
+            string url_photo = textBoxUrlPhoto.Text.ToString();
 
-            newCar.name = textBoxName.Text.ToString();
-            newCar.mark = comboBoxBrand.SelectedValue.ToString();
-            newCar.year = Convert.ToInt32(comboBoxYear.SelectedValue.ToString());
-            newCar.price = Convert.ToInt32(textBoxPrice.Text);
-            newCar.info = richTextBoxInfo.Text.ToString();
-            newCar.region = comboBoxRegion.SelectedValue.ToString();
-            newCar.url_photo = textBoxUrlPhoto.Text.ToString();
+            Uri tcpUri = new Uri("http://localhost:8080/");
+            EndpointAddress address = new EndpointAddress(tcpUri);
+            BasicHttpBinding binding = new BasicHttpBinding();
+            ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
+            IMyObject service = factory.CreateChannel();
 
-            db.Cars.InsertOnSubmit(newCar);
-            db.SubmitChanges();
-
-            MessageBox.Show("Успешно добавлено!");
+            bool answer = service.newCarFromUser(name, mark, year, price, info, region, url_photo);
+            if (answer)
+            {
+                MessageBox.Show("Успешно добавлено!");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка");
+            }
         }
     }
     public class DB : DataContext

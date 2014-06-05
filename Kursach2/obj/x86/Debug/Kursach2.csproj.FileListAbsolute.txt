@@ -39,3 +39,5 @@ C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\c
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\Kursach2.exe.config
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\MappingDLL.dll
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\MappingDLL.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\DLLforServer.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\DLLforServer.pdb

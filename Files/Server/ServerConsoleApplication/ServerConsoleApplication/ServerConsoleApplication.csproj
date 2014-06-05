@@ -36,11 +36,19 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DLLforServer">
-      <HintPath>..\..\..\..\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\bin\Debug\DLLforServer.dll</HintPath>
+    <Reference Include="DBLibrary">
+      <HintPath>..\..\..\..\Kursach2\bin\Debug\DBLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DLLforServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLforServer\DLLforServer\bin\Debug\DLLforServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MappingDLL">
+      <HintPath>..\..\..\Database\MappingDLL\MappingDLL\bin\Debug\MappingDLL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

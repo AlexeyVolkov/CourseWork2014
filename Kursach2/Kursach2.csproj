@@ -55,6 +55,10 @@
     <Reference Include="DBLibrary">
       <HintPath>..\Files\DBLibrary\DBLibrary\bin\Debug\DBLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="DLLforServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Files\Server\DLLforServer\DLLforServer\bin\Debug\DLLforServer.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelGenerator">
       <HintPath>..\..\..\..\..\Downloads\ExcelGenerator_bin_1_4\ExcelGenerator.dll</HintPath>
     </Reference>

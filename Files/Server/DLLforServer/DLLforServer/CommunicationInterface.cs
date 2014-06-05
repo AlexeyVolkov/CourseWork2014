@@ -10,7 +10,10 @@ namespace CommunicationInterface
     [ServiceContract] // Говорим WCF что это интерфейс для запросов сервису
     public interface IMyObject
     {
-        [OperationContract] // Делегируемый метод.
-        string GetCommandString(int i);
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
+        bool newCarFromGrid(string name, string mark, int year, int price, string url, string region);
+
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
+        bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
     }
 }
