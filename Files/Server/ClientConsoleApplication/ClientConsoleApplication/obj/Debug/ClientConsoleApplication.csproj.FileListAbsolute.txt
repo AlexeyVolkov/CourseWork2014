@@ -1,0 +1,6 @@
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe.config
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.pdb
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.csprojResolveAssemblyReference.cache
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.exe
+c:\users\алексей\documents\visual studio 2013\Projects\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.pdb

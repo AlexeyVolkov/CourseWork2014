@@ -1,0 +1,5 @@
+c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\bin\Debug\DLLforServer.dll
+c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\bin\Debug\DLLforServer.pdb
+c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.csprojResolveAssemblyReference.cache
+c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.dll
+c:\users\алексей\documents\visual studio 2013\Projects\DLLforServer\DLLforServer\obj\Debug\DLLforServer.pdb
