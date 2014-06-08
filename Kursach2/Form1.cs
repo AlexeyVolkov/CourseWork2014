@@ -21,11 +21,19 @@ namespace Kursach
     [ServiceContract]
     public interface IMyObject
     {
-        [OperationContract]
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
         bool newCarFromGrid(string name, string mark, int year, int price, string url, string region);
-        [OperationContract]
-        bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
 
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
+        bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
+        bool newClient(string full_name, string email, string passport);
+        [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
+        bool newOrder(int FK_id_client, int FK_id_car, DateTime data, int summ);
+        [OperationContract]
+        List<Client> getClients();
+        [OperationContract]
+        List<Car> getCars();
     }
     public partial class ParserForm : Form
     {
@@ -305,6 +313,11 @@ namespace Kursach
             {
                 MessageBox.Show("Ошибка");
             }
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }    
     }

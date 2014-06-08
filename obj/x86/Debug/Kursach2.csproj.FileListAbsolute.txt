@@ -11,3 +11,5 @@ C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\
 C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Debug\HtmlAgilityPack.xml
 C:\Users\Алексей\Documents\Visual Studio 2010\Projects\Kursach2\Kursach2\bin\Debug\ExcelGenerator.dll
+C:\Users\HP\Documents\CourseWork2014\obj\x86\Debug\Kursach2.exe
+C:\Users\HP\Documents\CourseWork2014\obj\x86\Debug\Kursach2.pdb

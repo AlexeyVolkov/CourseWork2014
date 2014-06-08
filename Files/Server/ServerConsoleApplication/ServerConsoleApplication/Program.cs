@@ -24,13 +24,22 @@ namespace CommunicationInterface
             get { return this.GetTable<Car>(); }
 
         }
+        public System.Data.Linq.Table<Client> Clients
+        {
+            get { return this.GetTable<Client>(); }
+        }
+        public System.Data.Linq.Table<Order> Orders
+        {
+            get { return this.GetTable<Order>(); }
+
+        }
     }
     public class MyObject : IMyObject
     {
+        DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
+
         public bool newCarFromGrid(string name, string mark, int year, int price, string url, string region)
         {
-            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
-            
             Car newCar = new Car();
 
             newCar.name = name;
@@ -46,8 +55,6 @@ namespace CommunicationInterface
         }
         public bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo)
         {
-            DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
-
             Car newCar = new Car();
 
             newCar.name = name;
@@ -62,6 +69,32 @@ namespace CommunicationInterface
             db.SubmitChanges();
             return true;
         }
+        public bool newClient(string full_name, string email, string passport)
+        {
+            Client newClient = new Client();
+
+            newClient.full_name = full_name;
+            newClient.email = email;
+            newClient.passport = passport;
+
+            db.Clients.InsertOnSubmit(newClient);
+            db.SubmitChanges();
+            return true;
+        }
+        public bool newOrder(int FK_id_client, int FK_id_car, DateTime date ,int summ )
+        {
+            Order newOrder = new Order();
+
+            newOrder.FK_id_client =FK_id_client;
+            newOrder.FK_id_car = FK_id_car;
+            newOrder.date = date;
+            newOrder.summ = summ;
+
+            db.Orders.InsertOnSubmit(newOrder);
+            db.SubmitChanges();
+            return true;
+        }
+
     }
 }
 

@@ -35,5 +35,23 @@ namespace Kursach
             ParserForm form = new ParserForm();
             form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clients form = new clients();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            order form = new order();
+            form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            business form = new business();
+            form.Show();
+        }
     }
 }

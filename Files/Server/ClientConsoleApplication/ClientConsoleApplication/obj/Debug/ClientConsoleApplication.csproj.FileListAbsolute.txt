@@ -10,3 +10,9 @@ C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientC
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.pdb
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe.config
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.exe
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.pdb
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.exe
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\bin\Debug\ClientConsoleApplication.pdb
+C:\Users\HP\Documents\CourseWork2014\Files\Server\ClientConsoleApplication\ClientConsoleApplication\obj\Debug\ClientConsoleApplication.csprojResolveAssemblyReference.cache
