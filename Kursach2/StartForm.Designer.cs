@@ -67,9 +67,9 @@
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(329, 155);
+            this.button2.Location = new System.Drawing.Point(315, 155);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 189);
+            this.button2.Size = new System.Drawing.Size(264, 189);
             this.button2.TabIndex = 4;
             this.button2.Text = "Клиенты";
             this.button2.UseVisualStyleBackColor = true;
@@ -124,9 +124,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(393, 350);
+            this.button4.Location = new System.Drawing.Point(390, 350);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 75);
+            this.button4.Size = new System.Drawing.Size(189, 75);
             this.button4.TabIndex = 9;
             this.button4.Text = "Отчёт";
             this.button4.UseVisualStyleBackColor = true;

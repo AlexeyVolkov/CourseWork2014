@@ -94,6 +94,25 @@ namespace CommunicationInterface
             db.SubmitChanges();
             return true;
         }
+        public List<Client> getClients()
+        {
+            List<Client> all = db.Clients.ToList();
+
+            return all;
+        }
+        public List<Car> getCars()
+        {
+            List<Car> all = db.Cars.ToList();
+
+            return all;
+        }
+        public bool deleteClient(int id)
+        {
+            Client client = db.Clients.Where(c => c.Id == id).FirstOrDefault();
+            db.Clients.DeleteOnSubmit(client);
+            db.SubmitChanges();
+            return true;
+        }
 
     }
 }

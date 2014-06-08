@@ -27,17 +27,14 @@ namespace Kursach
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "clientsDataSet.Clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.clientsDataSet.Clients);
+
             Uri tcpUri = new Uri("http://localhost:8080/");
             EndpointAddress address = new EndpointAddress(tcpUri);
             BasicHttpBinding binding = new BasicHttpBinding();
             ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
             IMyObject service = factory.CreateChannel();
             List<Client> litr =  service.getClients();
-            /*dataGridView1.RowCount = litr.Count;
-            for (int i = 0; i< litr.Count; i++)
-            {
-                dataGridView1[0,0].Value = litr[i].Id;
-            }*/
+
             var bindinglist = new BindingList<Client>(litr);
             var source = new BindingSource(bindinglist, null);
             dataGridView1.DataSource = source;
@@ -48,6 +45,25 @@ namespace Kursach
         {
             addclient form = new addclient();
             form.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Uri tcpUri = new Uri("http://localhost:8080/");
+            EndpointAddress address = new EndpointAddress(tcpUri);
+            BasicHttpBinding binding = new BasicHttpBinding();
+            ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
+            IMyObject service = factory.CreateChannel();
+
+            bool answer = service.deleteClient(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+            if (answer)
+            {
+                MessageBox.Show("Успешно удалено!");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка");
+            }
         }
     }
 }

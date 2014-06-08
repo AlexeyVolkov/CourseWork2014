@@ -34,6 +34,8 @@ namespace Kursach
         List<Client> getClients();
         [OperationContract]
         List<Car> getCars();
+        [OperationContract]
+        bool deleteClient(int id);
     }
     public partial class ParserForm : Form
     {
