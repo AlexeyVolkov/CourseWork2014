@@ -1,0 +1,15 @@
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\obj\Debug\SearchClass.csprojResolveAssemblyReference.cache
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\bin\Debug\SearchClass.dll
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\bin\Debug\SearchClass.pdb
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\bin\Debug\HtmlAgilityPack.dll
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\bin\Debug\HtmlAgilityPack.pdb
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\bin\Debug\HtmlAgilityPack.xml
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\obj\Debug\SearchClass.dll
+c:\users\алексей\documents\visual studio 2013\Projects\SearchClass\SearchClass\obj\Debug\SearchClass.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\bin\Debug\SearchClass.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\bin\Debug\SearchClass.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\obj\Debug\SearchClass.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\obj\Debug\SearchClass.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\SearchClass\SearchClass\obj\Debug\SearchClass.pdb

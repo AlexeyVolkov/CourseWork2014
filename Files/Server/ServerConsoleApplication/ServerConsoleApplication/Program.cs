@@ -9,6 +9,8 @@ using CommunicationInterface;
 using System.Data.SqlClient;
 using System.Data.Linq;
 using MappingDLL;
+using System.Threading;
+using SearchClass;
 
 namespace CommunicationInterface
 {
@@ -127,9 +129,47 @@ namespace Server
             host.AddServiceEndpoint(typeof(IMyObject), new BasicHttpBinding(), "");
             host.Open();
             Console.WriteLine("Сервер запущен");
+            Timer t = new Timer(TimerTick, null, 0, 20000);//1800000
+            // Wait for the user to hit <Enter>
             Console.ReadLine();
 
             host.Close();
+        }
+        private static void TimerTick(Object o)
+        {
+            // Display the date/time when this method got called.
+            Console.WriteLine(DateTime.Now + " / Database`s been updated.");
+
+            int mark_id = 0;
+            try
+            {
+                mark_id = Convert.ToInt32(comboBoxBrand.SelectedValue.ToString());
+            }
+            catch { }
+            int year1 = Convert.ToInt32(comboBoxYear1.SelectedValue.ToString());
+            int year2 = Convert.ToInt32(comboBoxYear2.SelectedValue.ToString());
+            int region = 0;
+            try
+            {
+                region = Convert.ToInt32(comboBoxRegion.SelectedValue.ToString());
+            }
+            catch { }
+            Search cars = new Search();//!!!!!!
+
+            cars.oldestDate = localOldestDate;
+            foreach (DateTime date in cars.datesList)
+            {
+                if (DateTime.Compare(cars.oldestDate, date) < 0)
+                {
+                    MessageBox.Show("Появилось новое объявление");
+                    SoundPlayer simpleSound = new SoundPlayer(@"c:\beepbeep.wav");
+                    simpleSound.Play();
+                    localOldestDate = date;
+                    cars.oldestDate = localOldestDate;
+                }
+            }
+            // Force a garbage collection to occur for this demo.
+            GC.Collect();
         }
     }
 }

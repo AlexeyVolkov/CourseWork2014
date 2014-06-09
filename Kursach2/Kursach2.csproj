@@ -83,6 +83,9 @@
     <Reference Include="mysql.web">
       <HintPath>..\..\Visual Studio 2012\Projects\Курсовая_БД\Курсовая_БД\bin\Debug\mysql.web.dll</HintPath>
     </Reference>
+    <Reference Include="SearchClass">
+      <HintPath>..\Files\SearchClass\SearchClass\bin\Debug\SearchClass.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -155,7 +158,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

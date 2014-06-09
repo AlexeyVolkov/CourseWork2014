@@ -41,12 +41,6 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLink = new System.Windows.Forms.DataGridViewLinkColumn();
             this.buttonExcel = new System.Windows.Forms.Button();
             this.checkBoxFollow = new System.Windows.Forms.CheckBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -61,6 +55,14 @@
             this.carsTableAdapter = new Kursach.carsDataSetTableAdapters.CarsTableAdapter();
             this.carsTableAdapter1 = new Kursach.carsDataSet1TableAdapters.CarsTableAdapter();
             this.AddToBDbutton = new System.Windows.Forms.Button();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Фотография = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLink = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -197,6 +200,7 @@
             this.ColumnPrice,
             this.ColumnYear,
             this.ColumnCity,
+            this.Фотография,
             this.ColumnDate,
             this.ColumnLink});
             this.dataGridView.Location = new System.Drawing.Point(129, 219);
@@ -205,50 +209,9 @@
             this.dataGridView.Size = new System.Drawing.Size(660, 402);
             this.dataGridView.TabIndex = 1;
             this.dataGridView.Visible = false;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.dataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellMouseEnter);
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Модель";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnName.Width = 220;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.HeaderText = "Цена";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            // 
-            // ColumnYear
-            // 
-            this.ColumnYear.HeaderText = "Год выпуска";
-            this.ColumnYear.Name = "ColumnYear";
-            this.ColumnYear.ReadOnly = true;
-            this.ColumnYear.Width = 50;
-            // 
-            // ColumnCity
-            // 
-            this.ColumnCity.HeaderText = "Город";
-            this.ColumnCity.Name = "ColumnCity";
-            this.ColumnCity.ReadOnly = true;
-            this.ColumnCity.Width = 140;
-            // 
-            // ColumnDate
-            // 
-            this.ColumnDate.HeaderText = "Дата";
-            this.ColumnDate.Name = "ColumnDate";
-            this.ColumnDate.ReadOnly = true;
-            this.ColumnDate.Width = 120;
-            // 
-            // ColumnLink
-            // 
-            this.ColumnLink.HeaderText = "Ссылка";
-            this.ColumnLink.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.ColumnLink.Name = "ColumnLink";
-            this.ColumnLink.ReadOnly = true;
-            this.ColumnLink.Text = "";
-            this.ColumnLink.Width = 300;
             // 
             // buttonExcel
             // 
@@ -359,11 +322,70 @@
             this.AddToBDbutton.Visible = false;
             this.AddToBDbutton.Click += new System.EventHandler(this.AddToBDbutton_Click);
             // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "Модель";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnName.Width = 220;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.HeaderText = "Цена";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            // 
+            // ColumnYear
+            // 
+            this.ColumnYear.HeaderText = "Год выпуска";
+            this.ColumnYear.Name = "ColumnYear";
+            this.ColumnYear.ReadOnly = true;
+            this.ColumnYear.Width = 50;
+            // 
+            // ColumnCity
+            // 
+            this.ColumnCity.HeaderText = "Город";
+            this.ColumnCity.Name = "ColumnCity";
+            this.ColumnCity.ReadOnly = true;
+            this.ColumnCity.Width = 140;
+            // 
+            // Фотография
+            // 
+            this.Фотография.HeaderText = "Фотография";
+            this.Фотография.Name = "Фотография";
+            this.Фотография.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColumnDate
+            // 
+            this.ColumnDate.HeaderText = "Дата";
+            this.ColumnDate.Name = "ColumnDate";
+            this.ColumnDate.ReadOnly = true;
+            this.ColumnDate.Width = 120;
+            // 
+            // ColumnLink
+            // 
+            this.ColumnLink.HeaderText = "Ссылка";
+            this.ColumnLink.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.ColumnLink.Name = "ColumnLink";
+            this.ColumnLink.ReadOnly = true;
+            this.ColumnLink.Text = "";
+            this.ColumnLink.Width = 300;
+            // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(948, 201);
+            this.pictureBoxPhoto.TabIndex = 16;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Visible = false;
+            // 
             // ParserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 633);
+            this.Controls.Add(this.pictureBoxPhoto);
             this.Controls.Add(this.AddToBDbutton);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
@@ -388,6 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,12 +431,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxYear2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnYear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
-        private System.Windows.Forms.DataGridViewLinkColumn ColumnLink;
         private System.Windows.Forms.Timer timer;
         private System.ComponentModel.BackgroundWorker backgroundWorkerSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -426,6 +443,14 @@
         private System.Windows.Forms.BindingSource carsBindingSource1;
         private carsDataSet1TableAdapters.CarsTableAdapter carsTableAdapter1;
         private System.Windows.Forms.Button AddToBDbutton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCity;
+        private System.Windows.Forms.DataGridViewImageColumn Фотография;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
+        private System.Windows.Forms.DataGridViewLinkColumn ColumnLink;
+        private System.Windows.Forms.PictureBox pictureBoxPhoto;
     }
 }
 

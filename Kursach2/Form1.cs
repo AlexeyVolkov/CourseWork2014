@@ -15,6 +15,7 @@ using System.Data.Linq;
 using System.ServiceModel;
 using CommunicationInterface;
 using MappingDLL;
+using SearchClass;
 
 namespace Kursach
 {
@@ -204,6 +205,7 @@ namespace Kursach
             result.carsList = cars.carsList;
             result.linksList = cars.linksList;
             result.datesList = cars.datesList;
+            result.photoList = cars.photoList;
             result.Enabled = cars.Enabled;
 
             //sender = result;
@@ -247,8 +249,13 @@ namespace Kursach
                     row.Cells[1].Value = i[1];
                     row.Cells[2].Value = i[2];
                     row.Cells[3].Value = i[3];
-                    row.Cells[4].Value = cars.datesList[j].ToString("D", CultureInfo.CreateSpecificCulture("ru-RU"));
-                    row.Cells[5].Value = cars.linksList[j];
+
+                    //row.Cells[4].Value = Image.FromFile(cars.photoList[j]); C:\Users\Алексей\YandexDisk\Photos\Vk.me
+                    row.Cells[4].Value = Image.FromFile(@"C:\Users\Алексей\YandexDisk\Photos\Vk.me\x_4891ad81.jpg");
+
+                    row.Cells[5].Value = cars.datesList[j].ToString("D", CultureInfo.CreateSpecificCulture("ru-RU"));
+                    row.Cells[6].Value = cars.linksList[j];
+                    
                 }
                 catch
                 {
@@ -319,6 +326,19 @@ namespace Kursach
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //DataGridViewImageCell cell = (DataGridViewImageCell)dataGridView.CurrentCell;
+            MessageBox.Show(dataGridView.CurrentCell.Value.ToString());
+            pictureBoxPhoto.Image = Image.FromFile(@"C:\Users\Алексей\YandexDisk\Photos\Vk.me\x_4891ad81.jpg");//cell.value;
+            pictureBoxPhoto.Visible = true;
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }    
