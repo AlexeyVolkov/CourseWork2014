@@ -55,14 +55,14 @@
             this.carsTableAdapter = new Kursach.carsDataSetTableAdapters.CarsTableAdapter();
             this.carsTableAdapter1 = new Kursach.carsDataSet1TableAdapters.CarsTableAdapter();
             this.AddToBDbutton = new System.Windows.Forms.Button();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Фотография = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Фотография = new System.Windows.Forms.DataGridViewLinkColumn();
             this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLink = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -212,6 +212,7 @@
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             this.dataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellMouseEnter);
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
+            this.dataGridView.MouseLeave += new System.EventHandler(this.dataGridView_MouseLeave);
             // 
             // buttonExcel
             // 
@@ -322,6 +323,18 @@
             this.AddToBDbutton.Visible = false;
             this.AddToBDbutton.Click += new System.EventHandler(this.AddToBDbutton_Click);
             // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.ErrorImage = null;
+            this.pictureBoxPhoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPhoto.InitialImage")));
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(665, 609);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxPhoto.TabIndex = 16;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Visible = false;
+            // 
             // ColumnName
             // 
             this.ColumnName.HeaderText = "Модель";
@@ -370,15 +383,6 @@
             this.ColumnLink.ReadOnly = true;
             this.ColumnLink.Text = "";
             this.ColumnLink.Width = 300;
-            // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(948, 201);
-            this.pictureBoxPhoto.TabIndex = 16;
-            this.pictureBoxPhoto.TabStop = false;
-            this.pictureBoxPhoto.Visible = false;
             // 
             // ParserForm
             // 
@@ -443,14 +447,14 @@
         private System.Windows.Forms.BindingSource carsBindingSource1;
         private carsDataSet1TableAdapters.CarsTableAdapter carsTableAdapter1;
         private System.Windows.Forms.Button AddToBDbutton;
+        private System.Windows.Forms.PictureBox pictureBoxPhoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCity;
-        private System.Windows.Forms.DataGridViewImageColumn Фотография;
+        private System.Windows.Forms.DataGridViewLinkColumn Фотография;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
         private System.Windows.Forms.DataGridViewLinkColumn ColumnLink;
-        private System.Windows.Forms.PictureBox pictureBoxPhoto;
     }
 }
 

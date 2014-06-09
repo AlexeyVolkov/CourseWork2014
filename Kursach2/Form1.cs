@@ -251,7 +251,7 @@ namespace Kursach
                     row.Cells[3].Value = i[3];
 
                     //row.Cells[4].Value = Image.FromFile(cars.photoList[j]); C:\Users\Алексей\YandexDisk\Photos\Vk.me
-                    row.Cells[4].Value = Image.FromFile(@"C:\Users\Алексей\YandexDisk\Photos\Vk.me\x_4891ad81.jpg");
+                    row.Cells[4].Value = cars.photoList[j];
 
                     row.Cells[5].Value = cars.datesList[j].ToString("D", CultureInfo.CreateSpecificCulture("ru-RU"));
                     row.Cells[6].Value = cars.linksList[j];
@@ -333,14 +333,25 @@ namespace Kursach
         private void dataGridView_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             //DataGridViewImageCell cell = (DataGridViewImageCell)dataGridView.CurrentCell;
-            MessageBox.Show(dataGridView.CurrentCell.Value.ToString());
-            pictureBoxPhoto.Image = Image.FromFile(@"C:\Users\Алексей\YandexDisk\Photos\Vk.me\x_4891ad81.jpg");//cell.value;
-            pictureBoxPhoto.Visible = true;
+            /*
+             * Current - это не та ячейка, на которую наводим
+             */
+            if (e.RowIndex > 0)
+            {
+                DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                pictureBoxPhoto.ImageLocation = cell.Value.ToString();
+                pictureBoxPhoto.Visible = true;
+            }
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxPhoto.Visible = false;
         }    
     }
 }
