@@ -40,7 +40,11 @@ namespace Kursach
     }
     public partial class ParserForm : Form
     {
+        /*
+         * Variables
+         */
         DateTime localOldestDate = new DateTime();
+        PhotoForm picForm = new PhotoForm();
         public ParserForm()
         {
             InitializeComponent();
@@ -336,11 +340,11 @@ namespace Kursach
             /*
              * Current - это не та ячейка, на которую наводим
              */
-            if (e.RowIndex > 0)
+            if (e.RowIndex > -1 && e.ColumnIndex == 4 && e.RowIndex < (dataGridView.Rows.Count-1))
             {
-                DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                pictureBoxPhoto.ImageLocation = cell.Value.ToString();
-                pictureBoxPhoto.Visible = true;
+                string url = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                picForm.setImage(url);
+                picForm.Show();
             }
         }
 
@@ -351,7 +355,11 @@ namespace Kursach
 
         private void dataGridView_MouseLeave(object sender, EventArgs e)
         {
-            pictureBoxPhoto.Visible = false;
+        }
+
+        private void dataGridView_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            picForm.Hide();
         }    
     }
 }
