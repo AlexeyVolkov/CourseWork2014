@@ -83,6 +83,9 @@
     <Reference Include="mysql.web">
       <HintPath>..\..\Visual Studio 2012\Projects\Курсовая_БД\Курсовая_БД\bin\Debug\mysql.web.dll</HintPath>
     </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1069\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="SearchClass">
       <HintPath>..\Files\SearchClass\SearchClass\bin\Debug\SearchClass.dll</HintPath>
     </Reference>
@@ -238,6 +241,7 @@
     <None Include="clientsDataSet.xss">
       <DependentUpon>clientsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

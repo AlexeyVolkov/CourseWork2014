@@ -30,7 +30,7 @@ namespace Kursach
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
         bool newClient(string full_name, string email, string passport);
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
-        bool newOrder(int FK_id_client, int FK_id_car, DateTime data, int summ);
+        bool newOrder(int FK_id_client, int FK_id_car, int summ);
         [OperationContract]
         List<Client> getClients();
         [OperationContract]

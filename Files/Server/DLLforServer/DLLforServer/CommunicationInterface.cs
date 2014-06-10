@@ -20,7 +20,7 @@ namespace CommunicationInterface
         [OperationContract] // Делегируемый метод.                          
         bool newClient(string full_name, string email, string passport);
         [OperationContract] // Делегируемый метод.                         
-        bool newOrder(int FK_id_client, int FK_id_car, DateTime data, int summ);
+        bool newOrder(int FK_id_client, int FK_id_car, int summ);
         [OperationContract] // Делегируемый метод. 
         List<Client> getClients();
         [OperationContract] // Делегируемый метод. 

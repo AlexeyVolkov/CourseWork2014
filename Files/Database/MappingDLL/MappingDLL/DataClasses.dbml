@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="cars" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Database\cars.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="MappingDLL.Properties.Settings" SettingsPropertyName="carsConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\cars.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="MappingDLL.Properties.Settings" SettingsPropertyName="carsConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Cars" Member="Cars">
     <Type Name="Car">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -8,7 +8,7 @@
       <Column Name="year" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="info" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="region" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="url" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="url_photo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
@@ -29,8 +29,8 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="FK_id_client" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FK_id_car" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="summ" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="summ" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Car_Order" Member="Car" ThisKey="FK_id_car" OtherKey="Id" Type="Car" IsForeignKey="true" />
       <Association Name="Client_Order" Member="Client" ThisKey="FK_id_client" OtherKey="Id" Type="Client" IsForeignKey="true" />
     </Type>

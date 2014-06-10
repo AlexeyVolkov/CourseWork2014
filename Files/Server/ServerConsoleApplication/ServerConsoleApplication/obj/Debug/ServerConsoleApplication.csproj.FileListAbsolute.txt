@@ -33,3 +33,8 @@ C:\Users\HP\Documents\CourseWork2014\Files\Server\ServerConsoleApplication\Serve
 H:\Nacht\CourseWork2014(антонио)\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\ServerConsoleApplication.exe.config
 H:\Nacht\CourseWork2014(антонио)\Files\Server\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.exe
 H:\Nacht\CourseWork2014(антонио)\Files\Server\ServerConsoleApplication\ServerConsoleApplication\obj\Debug\ServerConsoleApplication.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\SearchClass.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\SearchClass.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\bin\Debug\HtmlAgilityPack.xml

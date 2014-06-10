@@ -18,6 +18,9 @@ using System.ServiceModel;
 using CommunicationInterface;
 using MappingDLL;
 
+using System.Net;
+using System.Net.Mail;
+
 using iTextSharp.text;
 using iTextSharp;
 using System.IO;
@@ -171,9 +174,9 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int FK_id_client = 0;
-            int FK_id_car = 0;
-            DateTime dat = dateTimePicker1.Value;
+            int FK_id_client = 4;
+            int FK_id_car = 2;
+            string dat = /*dateTimePicker1.Value.ToString()*/"";
             
             int summ = 0;
             Uri tcpUri = new Uri("http://localhost:8080/");
@@ -182,7 +185,7 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
             ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
             IMyObject service = factory.CreateChannel();
 
-            bool answer = service.newOrder(FK_id_client, FK_id_car, dat ,summ );
+            bool answer = service.newOrder(FK_id_client, FK_id_car,summ );
             if (answer)
             {
                 MessageBox.Show("Успешно добавлено!");
@@ -192,6 +195,36 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
                 MessageBox.Show("Ошибка");
             }
         
+        }
+        public static void SendMail(string smtpServer, string from, string password, string mailto, string caption, string message, string attachFile = null)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(from);
+                mail.To.Add(new MailAddress(mailto));
+                mail.Subject = caption;
+                mail.Body = message;
+                if (!string.IsNullOrEmpty(attachFile))
+                    mail.Attachments.Add(new Attachment(attachFile));
+                SmtpClient client = new SmtpClient();
+                client.Host = smtpServer;
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.Credentials = new NetworkCredential(from.Split('@')[0], password);
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.Send(mail);
+                mail.Dispose();
+                MessageBox.Show("Письмо успешно отправлено!");
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Mail.Send: " + e.Message);
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SendMail("smtp.gmail.com", "oopw14@gmail.com", "oooopppp", "oopw14@gmail.com", "Договор №52", "В связи с расширением..");
         }
     }
 }
