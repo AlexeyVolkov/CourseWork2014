@@ -284,8 +284,13 @@ namespace Kursach
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddNewCarForm carForm = new AddNewCarForm();
-            carForm.Show();
+            Auth loginForm = new Auth();
+            loginForm.Show();
+            if (loginForm.Enabled)
+            {
+                AddNewCarForm carForm = new AddNewCarForm();
+                carForm.Show();
+            }
         }
 
         private void ParserForm_Load(object sender, EventArgs e)

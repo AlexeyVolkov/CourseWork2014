@@ -115,6 +115,12 @@
     <Compile Include="AddNewCarForm.Designer.cs">
       <DependentUpon>AddNewCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
     <Compile Include="business.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewCarForm.resx">
       <DependentUpon>AddNewCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="business.resx">
       <DependentUpon>business.cs</DependentUpon>

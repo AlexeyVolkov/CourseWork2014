@@ -170,3 +170,4 @@ C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\S
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\SearchClass.pdb
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach.PhotoForm.resources
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\bin\Debug\OpenPop.dll
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Kursach2\obj\x86\Debug\Kursach.Auth.resources
