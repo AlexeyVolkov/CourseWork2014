@@ -12,7 +12,6 @@
       <Column Name="region" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="url" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="url_photo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Association Name="Car_Order" Member="Orders" ThisKey="Id" OtherKey="FK_id_car" Type="Order" />
     </Type>
   </Table>
   <Table Name="dbo.Clients" Member="Clients">
@@ -21,7 +20,6 @@
       <Column Name="full_name" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="email" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="passport" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="Client_Order" Member="Orders" ThisKey="Id" OtherKey="FK_id_client" Type="Order" />
     </Type>
   </Table>
   <Table Name="dbo.Orders" Member="Orders">
@@ -29,10 +27,8 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="FK_id_client" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FK_id_car" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="date" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="summ" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Car_Order" Member="Car" ThisKey="FK_id_car" OtherKey="Id" Type="Car" IsForeignKey="true" />
-      <Association Name="Client_Order" Member="Client" ThisKey="FK_id_client" OtherKey="Id" Type="Client" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

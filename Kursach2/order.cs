@@ -176,7 +176,7 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
         {
             int FK_id_client = 4;
             int FK_id_car = 2;
-            string dat = /*dateTimePicker1.Value.ToString()*/"";
+            string dat = dateTimePicker1.Value.ToString();
             
             int summ = 0;
             Uri tcpUri = new Uri("http://localhost:8080/");
@@ -185,7 +185,7 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
             ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
             IMyObject service = factory.CreateChannel();
 
-            bool answer = service.newOrder(FK_id_client, FK_id_car,summ );
+            bool answer = service.newOrder(FK_id_client, FK_id_car, dat, summ );
             if (answer)
             {
                 MessageBox.Show("Успешно добавлено!");

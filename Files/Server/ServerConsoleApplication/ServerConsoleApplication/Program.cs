@@ -84,7 +84,7 @@ namespace CommunicationInterface
             db.SubmitChanges();
             return true;
         }
-        public bool newOrder(int FK_id_client, int FK_id_car, int summ )
+        public bool newOrder(int FK_id_client, int FK_id_car, string date, int summ )
         {
             /*
              * May not work because of FOREIGN keys.
@@ -94,7 +94,7 @@ namespace CommunicationInterface
 
             newOrder.FK_id_client =FK_id_client;
             newOrder.FK_id_car = FK_id_car;
-            //newOrder.date = date; //я ебал, даты нигде не работают
+            newOrder.date = date;
             newOrder.summ = summ;
 
             db.Orders.InsertOnSubmit(newOrder);

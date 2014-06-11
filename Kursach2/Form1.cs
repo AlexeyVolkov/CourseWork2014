@@ -30,7 +30,7 @@ namespace Kursach
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
         bool newClient(string full_name, string email, string passport);
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
-        bool newOrder(int FK_id_client, int FK_id_car, int summ);
+        bool newOrder(int FK_id_client, int FK_id_car, string date, int summ);
         [OperationContract]
         List<Client> getClients();
         [OperationContract]
@@ -86,6 +86,7 @@ namespace Kursach
             dataGridView.Visible = false;//dataGridView is being blocked
             checkBoxFollow.Visible = false;
             buttonExcel.Visible = false;
+            AddToBDbutton.Visible = false;
 
             int mark_id = 0;
             try
@@ -234,7 +235,7 @@ namespace Kursach
                 dataGridView.Visible = true;
                 dataGridView.Rows.Clear();
                 //checkBoxFollow.Visible = true;                 -Тут изменить, если чё
-                //buttonExcel.Visible = true;                               -Тут изменить, если чё
+                buttonExcel.Visible = true;                               
                 AddToBDbutton.Visible = true;
             }
             else

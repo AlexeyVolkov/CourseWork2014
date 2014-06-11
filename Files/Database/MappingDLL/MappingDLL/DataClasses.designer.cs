@@ -122,8 +122,6 @@ namespace MappingDLL
 		
 		private string _url_photo;
 		
-		private EntitySet<Order> _Orders;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -152,7 +150,6 @@ namespace MappingDLL
 		
 		public Car()
 		{
-			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
 			OnCreated();
 		}
 		
@@ -356,19 +353,6 @@ namespace MappingDLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Car_Order", Storage="_Orders", ThisKey="Id", OtherKey="FK_id_car")]
-		public EntitySet<Order> Orders
-		{
-			get
-			{
-				return this._Orders;
-			}
-			set
-			{
-				this._Orders.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -388,18 +372,6 @@ namespace MappingDLL
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Car = this;
-		}
-		
-		private void detach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Car = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Clients")]
@@ -415,8 +387,6 @@ namespace MappingDLL
 		private string _email;
 		
 		private string _passport;
-		
-		private EntitySet<Order> _Orders;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -434,7 +404,6 @@ namespace MappingDLL
 		
 		public Client()
 		{
-			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
 			OnCreated();
 		}
 		
@@ -518,19 +487,6 @@ namespace MappingDLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Orders", ThisKey="Id", OtherKey="FK_id_client")]
-		public EntitySet<Order> Orders
-		{
-			get
-			{
-				return this._Orders;
-			}
-			set
-			{
-				this._Orders.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -550,18 +506,6 @@ namespace MappingDLL
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Orders")]
@@ -579,10 +523,6 @@ namespace MappingDLL
 		private string _date;
 		
 		private System.Nullable<int> _summ;
-		
-		private EntityRef<Car> _Car;
-		
-		private EntityRef<Client> _Client;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -602,8 +542,6 @@ namespace MappingDLL
 		
 		public Order()
 		{
-			this._Car = default(EntityRef<Car>);
-			this._Client = default(EntityRef<Client>);
 			OnCreated();
 		}
 		
@@ -638,10 +576,6 @@ namespace MappingDLL
 			{
 				if ((this._FK_id_client != value))
 				{
-					if (this._Client.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnFK_id_clientChanging(value);
 					this.SendPropertyChanging();
 					this._FK_id_client = value;
@@ -662,10 +596,6 @@ namespace MappingDLL
 			{
 				if ((this._FK_id_car != value))
 				{
-					if (this._Car.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnFK_id_carChanging(value);
 					this.SendPropertyChanging();
 					this._FK_id_car = value;
@@ -675,7 +605,7 @@ namespace MappingDLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="VarChar(50)")]
 		public string date
 		{
 			get
@@ -711,74 +641,6 @@ namespace MappingDLL
 					this._summ = value;
 					this.SendPropertyChanged("summ");
 					this.OnsummChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Car_Order", Storage="_Car", ThisKey="FK_id_car", OtherKey="Id", IsForeignKey=true)]
-		public Car Car
-		{
-			get
-			{
-				return this._Car.Entity;
-			}
-			set
-			{
-				Car previousValue = this._Car.Entity;
-				if (((previousValue != value) 
-							|| (this._Car.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Car.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Car.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._FK_id_car = value.Id;
-					}
-					else
-					{
-						this._FK_id_car = default(int);
-					}
-					this.SendPropertyChanged("Car");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Client", ThisKey="FK_id_client", OtherKey="Id", IsForeignKey=true)]
-		public Client Client
-		{
-			get
-			{
-				return this._Client.Entity;
-			}
-			set
-			{
-				Client previousValue = this._Client.Entity;
-				if (((previousValue != value) 
-							|| (this._Client.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Client.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Client.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._FK_id_client = value.Id;
-					}
-					else
-					{
-						this._FK_id_client = default(int);
-					}
-					this.SendPropertyChanged("Client");
 				}
 			}
 		}
