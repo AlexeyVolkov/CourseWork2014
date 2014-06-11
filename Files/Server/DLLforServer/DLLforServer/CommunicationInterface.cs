@@ -27,5 +27,7 @@ namespace CommunicationInterface
         List<Car> getCars();
         [OperationContract] // Делегируемый метод. 
         bool deleteClient(int id);
+        [OperationContract] // Делегируемый метод. 
+        bool deleteCar(int id);
     }
 }

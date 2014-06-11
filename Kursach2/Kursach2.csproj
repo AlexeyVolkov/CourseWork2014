@@ -152,6 +152,12 @@
       <DependentUpon>clientsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DefaultLists.cs" />
+    <Compile Include="DeleteCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCarForm.Designer.cs">
+      <DependentUpon>DeleteCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Excel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clients.resx">
       <DependentUpon>clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCarForm.resx">
+      <DependentUpon>DeleteCarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

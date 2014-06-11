@@ -62,6 +62,7 @@
             this.carsTableAdapter = new Kursach.carsDataSetTableAdapters.CarsTableAdapter();
             this.carsTableAdapter1 = new Kursach.carsDataSet1TableAdapters.CarsTableAdapter();
             this.AddToBDbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -371,11 +372,23 @@
             this.AddToBDbutton.Visible = false;
             this.AddToBDbutton.Click += new System.EventHandler(this.AddToBDbutton_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(885, 548);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 73);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ParserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 633);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.AddToBDbutton);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
@@ -439,6 +452,7 @@
         private System.Windows.Forms.DataGridViewLinkColumn Фотография;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
         private System.Windows.Forms.DataGridViewLinkColumn ColumnLink;
+        private System.Windows.Forms.Button button1;
     }
 }
 

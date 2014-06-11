@@ -43,26 +43,45 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addclient form = new addclient();
-            form.ShowDialog();
+            Auth loginForm = new Auth();
+            loginForm.ShowDialog();
+            if (loginForm.Enabled)
+            {
+                //Here goes code
+                addclient form = new addclient();
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Uri tcpUri = new Uri("http://localhost:8080/");
-            EndpointAddress address = new EndpointAddress(tcpUri);
-            BasicHttpBinding binding = new BasicHttpBinding();
-            ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
-            IMyObject service = factory.CreateChannel();
-
-            bool answer = service.deleteClient(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
-            if (answer)
+            Auth loginForm = new Auth();
+            loginForm.ShowDialog();
+            if (loginForm.Enabled)
             {
-                MessageBox.Show("Успешно удалено!");
+                Uri tcpUri = new Uri("http://localhost:8080/");
+                EndpointAddress address = new EndpointAddress(tcpUri);
+                BasicHttpBinding binding = new BasicHttpBinding();
+                ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
+                IMyObject service = factory.CreateChannel();
+
+                bool answer = service.deleteClient(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                if (answer)
+                {
+                    MessageBox.Show("Успешно удалено!");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка");
+                }
             }
             else
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
             }
         }
     }

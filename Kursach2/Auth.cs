@@ -21,16 +21,13 @@ namespace Kursach
         private void button1_Click(object sender, EventArgs e)
         {
             string login = textBox1.Text;
-            string password = maskedTextBox1.Text;
+            string password = textBox2.Text;
 
             if (login == "alex" && password == "kozlov")
             {
-                Enabled = true;
+                this.Enabled = true;
             }
-            else
-            {
-                MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
-            }
+            this.Hide();
         }
     }
 }

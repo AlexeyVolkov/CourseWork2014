@@ -37,6 +37,8 @@ namespace Kursach
         List<Car> getCars();
         [OperationContract]
         bool deleteClient(int id);
+        [OperationContract]
+        bool deleteCar(int id);
     }
     public partial class ParserForm : Form
     {
@@ -285,12 +287,21 @@ namespace Kursach
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Auth loginForm = new Auth();
-            loginForm.Show();
+            loginForm.ShowDialog();
             if (loginForm.Enabled)
             {
                 AddNewCarForm carForm = new AddNewCarForm();
                 carForm.Show();
             }
+            else
+            {
+                MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
+            }
+        }
+        private void openCarForm()
+        {
+            AddNewCarForm carForm = new AddNewCarForm();
+                carForm.Show();
         }
 
         private void ParserForm_Load(object sender, EventArgs e)
@@ -365,6 +376,25 @@ namespace Kursach
         private void dataGridView_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             picForm.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*Auth loginForm = new Auth();
+            loginForm.ShowDialog();
+            if (loginForm.Enabled)
+            {*/
+            DeleteCarForm form = new DeleteCarForm();
+            form.ShowDialog();
+            /*}
+            else
+            {
+                MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
+            }*/
         }    
     }
 }

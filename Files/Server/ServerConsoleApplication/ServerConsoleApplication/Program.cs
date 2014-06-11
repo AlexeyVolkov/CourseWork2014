@@ -119,6 +119,13 @@ namespace CommunicationInterface
             db.SubmitChanges();
             return true;
         }
+        public bool deleteCar(int id)
+        {
+            Car car = db.Cars.Where(c => c.Id == id).FirstOrDefault();
+            db.Cars.DeleteOnSubmit(car);
+            db.SubmitChanges();
+            return true;
+        }
 
     }
 }

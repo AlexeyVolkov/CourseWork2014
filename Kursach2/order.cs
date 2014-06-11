@@ -224,6 +224,7 @@ iTextSharp.text.Paragraph Task16 = new iTextSharp.text.Paragraph("(подпис�
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            //Чтобы с фалом отправить в конец въебашь просто строчку с адресом к файлу.
             SendMail("smtp.gmail.com", "oopw14@gmail.com", "oooopppp", "oopw14@gmail.com", "Договор №52", "В связи с расширением..");
         }
     }
