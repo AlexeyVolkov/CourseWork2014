@@ -23,7 +23,7 @@ namespace Kursach
     public interface IMyObject
     {
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
-        bool newCarFromGrid(string name, string mark, int year, int price, string url, string region);
+        bool newCarFromGrid(string name, string mark, int year, int price, string url, string url_photo, string region);
 
         [OperationContract] // Делегируемый метод.                            -Тут изменять при изменениии
         bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
@@ -72,7 +72,7 @@ namespace Kursach
             comboBoxRegion.DisplayMember = "Key";
             comboBoxRegion.ValueMember = "Value";
             comboBoxRegion.DataSource = new BindingSource(regionList, null);
-            comboBoxRegion.SelectedIndex = 75;
+            comboBoxRegion.SelectedIndex = 76;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -324,7 +324,8 @@ namespace Kursach
             string mark = comboBoxBrand.SelectedValue.ToString();
             int year = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value.ToString());
             int price = Convert.ToInt32(dataGridView.CurrentRow.Cells[1].Value.ToString().Replace(" ", string.Empty));
-            string url = dataGridView.CurrentRow.Cells[5].Value.ToString();
+            string url = dataGridView.CurrentRow.Cells[6].Value.ToString();
+            string url_photo = dataGridView.CurrentRow.Cells[4].Value.ToString();
             string region = comboBoxRegion.SelectedValue.ToString();
 
             Uri tcpUri = new Uri("http://localhost:8080/");
@@ -333,7 +334,7 @@ namespace Kursach
             ChannelFactory<IMyObject> factory = new ChannelFactory<IMyObject>(binding, address);
             IMyObject service = factory.CreateChannel();
 
-            bool answer = service.newCarFromGrid(name, mark, year, price, url, region);
+            bool answer = service.newCarFromGrid(name, mark, year, price, url, url_photo, region);
             if (answer)
             {
                 MessageBox.Show("Успешно добавлено!");
@@ -384,17 +385,17 @@ namespace Kursach
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*Auth loginForm = new Auth();
+            Auth loginForm = new Auth();
             loginForm.ShowDialog();
             if (loginForm.Enabled)
-            {*/
-            DeleteCarForm form = new DeleteCarForm();
-            form.ShowDialog();
-            /*}
+            {
+                DeleteCarForm form = new DeleteCarForm();
+                form.ShowDialog();
+            }
             else
             {
                 MessageBox.Show("Неправильно введёно 'Имя' или 'Пароль'.");
-            }*/
+            }
         }    
     }
 }

@@ -9,3 +9,4 @@ C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforS
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\obj\Debug\DLLforServer.pdb
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\bin\Debug\MappingDLL.dll
 C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\bin\Debug\MappingDLL.pdb
+C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\DLLforServer\DLLforServer\obj\Debug\DLLforServer.csprojResolveAssemblyReference.cache

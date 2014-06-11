@@ -40,7 +40,7 @@ namespace CommunicationInterface
     {
         DB db = new DB(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Алексей\Documents\SourceTree\CourseWork2014\Files\Server\ServerConsoleApplication\ServerConsoleApplication\cars.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public bool newCarFromGrid(string name, string mark, int year, int price, string url, string region)
+        public bool newCarFromGrid(string name, string mark, int year, int price, string url, string url_photo, string region)
         {
             Car newCar = new Car();
 
@@ -49,6 +49,7 @@ namespace CommunicationInterface
             newCar.year = year;
             newCar.price = price;
             newCar.url = url;
+            newCar.url_photo = url_photo;
             newCar.region = region;
 
             db.Cars.InsertOnSubmit(newCar);

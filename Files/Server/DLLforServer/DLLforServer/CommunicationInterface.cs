@@ -13,8 +13,7 @@ namespace CommunicationInterface
     public interface IMyObject
     {
         [OperationContract] // Делегируемый метод.                       
-        bool newCarFromGrid(string name, string mark, int year, int price, string url, string region);
-
+        bool newCarFromGrid(string name, string mark, int year, int price, string url, string url_photo, string region);
         [OperationContract] // Делегируемый метод.                          
         bool newCarFromUser(string name, string mark, int year, int price, string info, string region, string url_photo);
         [OperationContract] // Делегируемый метод.                          
